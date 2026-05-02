@@ -1,101 +1,110 @@
-Smart File Integrity & Intrusion Alert System
+# 🔐 Smart File Integrity & Intrusion Alert System
 
-A Python-based security tool that monitors files in a selected folder and detects any unauthorized modifications. If a file is changed or tampered with, the system automatically moves it to a quarantine folder and logs the incident with date and time.
+## 📌 Overview
 
-This project is designed to demonstrate file integrity monitoring, intrusion detection, and basic cybersecurity concepts using Python.
+A Python-based security tool that monitors files within a selected folder and detects unauthorized modifications. If any file is altered or tampered with, the system automatically isolates it in a quarantine folder and logs the event with a timestamp.
 
-Features
+This project demonstrates core cybersecurity concepts such as file integrity monitoring, intrusion detection, and automated response mechanisms.
 
-Register and protect any folder
+---
 
-File integrity verification using SHA-256 hashing
+## 🚀 Features
 
-Automatic detection of file tampering
+* 📁 Register and monitor any folder
+* 🔑 File integrity verification using SHA-256 hashing
+* ⚠️ Automatic detection of file tampering
+* 🔄 Real-time monitoring of protected files
+* 🛑 Automatic quarantine of suspicious files
+* 📊 Security dashboard for file status tracking
+* 📝 Detailed logs with date and time
+* 🖥️ User-friendly GUI built with Tkinter
 
-Real-time monitoring of protected files
+---
 
-Automatic quarantine of suspicious files
+## ⚙️ How It Works
 
-Security dashboard to view file status
+1. The user selects a folder to protect
+2. The system generates SHA-256 hash values for all files
+3. Hashes are stored in a local JSON database (`hash_database.json`)
+4. During monitoring, hashes are recalculated
+5. If a mismatch is detected, the file is flagged as tampered
+6. The file is moved to the `quarantine/` folder
+7. The event is logged with a timestamp in `tamper_logs.txt`
 
-Detailed logs with date and time
+---
 
-Simple Tkinter GUI interface
+## 📁 Project Structure
 
-How It Works
+```
+FileIntegrityChecker/
+│── main.py
+│── hash_database.json
+│── tamper_logs.txt
+│── quarantine/
+│── README.md
+```
 
-The user selects a folder to protect.
+---
 
-The system generates SHA-256 hash values for all files in that folder.
+## 🛠️ Technologies Used
 
-These hashes are stored in a local database (hash_database.json).
+* Python
+* Tkinter (GUI)
+* SHA-256 Hashing
+* JSON (for lightweight database)
+* File System Operations
 
-During monitoring, the system recalculates file hashes.
+---
 
-If a hash changes, the file is considered tampered.
+## 💻 Installation & Setup
 
-The tampered file is moved to the quarantine folder.
+### 1. Clone the repository
 
-The event is recorded in the log file with timestamp.
+```
+git clone https://github.com/YOUR_USERNAME/FileIntegrityChecker.git
+```
 
-Project Structure
-FileIntegrityChecker
-│
-├── main.py
-├── hash_database.json
-├── tamper_logs.txt
-├── quarantine/
-└── README.md
-Technologies Used
+### 2. Navigate to the project directory
 
-Python
-
-Tkinter (GUI)
-
-SHA-256 Hashing
-
-JSON Database
-
-File System Monitoring
-
-Installation
-
-Clone the repository
-
-git clone https://github.com/yourusername/FileIntegrityChecker.git
-
-Go to the project folder
-
+```
 cd FileIntegrityChecker
+```
 
-Run the program
+### 3. Run the application
 
+```
 python main.py
-Usage
+```
 
-Click Register & Protect Folder to select a folder for monitoring.
+---
 
-Use Scan Integrity (Manual) to check file integrity.
+## ▶️ Usage
 
-Click Start Real-Time Monitoring to continuously monitor the files.
+* Click **"Register & Protect Folder"** to select a folder
+* Use **"Scan Integrity (Manual)"** to verify file status
+* Click **"Start Real-Time Monitoring"** for continuous protection
+* View the **Security Dashboard** for file status
+* Check **Logs** to see tampering events
 
-View the Security Dashboard to see file status.
+---
 
-Check Logs to see detected tampering events.
+## 🎯 Key Learning Outcomes
+
+* Implemented file integrity verification using cryptographic hashing
+* Designed a real-time monitoring system for intrusion detection
+* Built a GUI-based security tool for non-technical users
+* Applied practical cybersecurity concepts in a real-world scenario
+
+---
+
+
+---
 
 Example Security Logs
 [2026-03-12 10:22:41] C:\protected\data.txt -> TAMPERED & QUARANTINED
 Learning Outcomes
+## 🏁 Conclusion
 
-This project demonstrates:
+This project highlights how Python can be used to build lightweight security tools for monitoring file integrity and detecting unauthorized access, making it useful for basic system protection and educational purposes.
 
-File Integrity Monitoring (FIM)
-
-Basic Intrusion Detection Concepts
-
-Cryptographic Hashing
-
-Python GUI Development
-
-Secure File Handling
 <img width="857" height="621" alt="Screenshot 2026-03-12 080721" src="https://github.com/user-attachments/assets/9841f1c5-1f77-4225-b3fa-b8089d1c961c" />
